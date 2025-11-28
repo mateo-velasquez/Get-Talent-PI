@@ -1,0 +1,48 @@
+Dejo una lista de pasos para que aquellos que no pudieron generar el entorno virtual puedan replicarlo
+
+
+
+CONSOLA
+
+Abrir la consola (cmd), ingrasar el comando   --> cd "ruta a la carpeta"
+
+Una vez localizados en la carpeta a la que llamaremos carpeta_madre, vamos a generar el entorno virtual con el comando --> python -m venv venv
+
+Luego activamos el entorno virtual con el comando -->  venv\Scripts\activate
+
+Descargar el archivo requirements.txt de discord, moverlo a la carpeta_madre y correr el comando --> pip install -r requirements.txt
+
+Una vez instalado todo okay, correr el comando --> jupyter lab
+
+Esto deberia redirigirlos a un puerto local automaticamente, en caso que no lo haga copiar y pegar en un navegador el puerto que salga por consola..
+
+
+
+
+En caso de tener error en la instalacion con el requirements.txt. 
+
+Prueben instalando las librerias de a 1 (sin jupyter lab)
+pip install cohere
+pip install python-dotenv
+pip install ipywidgets
+
+Y luego pueden correr el archivo .ipynb dentro de Visual Studio (con el entorno activado)
+
+
+
+
+API KEY
+
+Ingresar a la pagina de cohere, crerse una cuenta y luego ir a Dashboard --> Api Keys para obtener el valor de su Api Key
+
+Copiar este valor y pegarlo en un archivo que va a llamarse .env (.env es la extension)
+Dentro del .env la api key debe estar asi:
+
+COHERE_API_KEY="1OLq6QrEmdaZQ455gfgpVzXKwvlOWaTQNGGaTTcs1MJ"
+
+
+
+
+NOTEBOOK o VS CODE
+
+Dentro del notebook debemos configurar la conexion con el load_dotenv. y ya empezar a usar el modelo. 
