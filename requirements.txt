@@ -2,3 +2,7 @@ cohere
 jupyterlab
 python-dotenv
 ipywidgets
+scikit-learn
+chromadb
+langchain
+langchain_community
