@@ -6,3 +6,10 @@ scikit-learn
 chromadb
 langchain
 langchain_community
+
+fastapi
+uvicorn
+pydantic
+motor
+httpx
+python-dotenv
