@@ -1,18 +1,20 @@
 # app/services/rag_service.py
 from app.repositories.repository import DocumentRepository
 from app.repositories.vector_store import VectorStore
-from challenge_APIs.challenge.app.schemas.dtos import (
+from app.schemas.dtos import (
     DocumentUploadRequest, DocumentUploadResponse,
     GenerateEmbeddingsResponse, SearchResponse, AskResponse
 )
-from challenge_APIs.challenge.app.schemas.dao_documents import DocumentModel
+from app.schemas.dao_documents import DocumentModel
 from app.utils.logging import Logger
+from typing import List
+from app.core.config import API_KEY
 
 # Clase para hacer de orquestador (tiene la lógica del negocio)
 class RagService:
     def __init__(self, repository: DocumentRepository, vector_store: VectorStore):
         self.repository = repository
-        self.vector_store = vector_store
+        self.vector_store = vector_store(API_KEY)
 
     # Función para cargar documentos
     async def upload_document(self, data: DocumentUploadRequest) -> DocumentUploadResponse:
@@ -39,6 +41,16 @@ class RagService:
             message="Document uploaded successfully",
             document_id=doc_id
         )
+    
+    async def get_documents(self) -> List[DocumentModel]:
+        Logger.add_to_log("info", "Service: Solicitando lista completa de documentos")
+
+        # Llamamos al método que ya creaste en el repositorio
+        documents = await self.repository.get_documents()
+
+        Logger.add_to_log("debug", f"Service: Se recuperaron {len(documents)} documentos.")
+
+        return documents
 
     # Función para generar un embedding
     async def generate_embeddings(self, doc_id: str) -> GenerateEmbeddingsResponse:
@@ -75,7 +87,9 @@ class RagService:
         # Delegamos la búsqueda vectorial
         results = self.vector_store.search_similarity(query)
         
-        # Aquí podrías agregar lógica extra (ej: filtrar por fecha), 
+        # Aca necesito agregar lógica extra (ej: filtrar por fecha), 
+
+
         # pero por ahora devolvemos directo.
         return SearchResponse(results=results)
 

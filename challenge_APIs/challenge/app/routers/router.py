@@ -1,12 +1,14 @@
 # Router (hace de controller)
 
 from fastapi import APIRouter, Depends, HTTPException, status
-from challenge_APIs.challenge.app.schemas.dtos import (
+from typing import List
+from app.schemas.dtos import (
     DocumentUploadRequest, DocumentUploadResponse,
     GenerateEmbeddingsRequest, GenerateEmbeddingsResponse,
     SearchRequest, SearchResponse,
     AskRequest, AskResponse
 )
+from app.schemas.dao_documents import DocumentModel
 from app.services.service import RagService
 from app.dependencies import get_rag_service
 from app.utils.logging import Logger
@@ -28,6 +30,16 @@ async def upload_document(
         return await service.upload_document(request)
     except Exception as e:
         Logger.add_to_log("error", f"Error crítico en endpoint /upload: {str(e)}")
+        raise HTTPException(status_code=500, detail="Error interno del servidor")
+    
+@router.get("/documents",response_model=List[DocumentModel], status_code=status.HTTP_200_OK)
+async def get_all_documents(
+    service: RagService = Depends(get_rag_service)
+):
+    try:
+        return await service.get_documents()
+    except Exception as e:
+        Logger.add_to_log("error", f"Error crítico para obtener todos los documentos: {str(e)}")
         raise HTTPException(status_code=500, detail="Error interno del servidor")
 
 @router.post("/generate-embeddings", response_model=GenerateEmbeddingsResponse)

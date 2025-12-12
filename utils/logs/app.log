@@ -1,0 +1,13 @@
+2025-12-12 15:46:29 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 15:46:30 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 15:49:59 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 15:50:07 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 15:50:07 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 15:53:21 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 15:53:28 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 15:53:57 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 15:53:57 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 15:58:39 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 15:58:39 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 15:58:40 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 15:58:52 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.

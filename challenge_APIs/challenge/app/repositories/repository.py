@@ -2,7 +2,7 @@
 from typing import Optional, List
 from datetime import datetime
 from app.utils.logging import Logger
-from challenge_APIs.challenge.app.schemas.dao_documents import DocumentModel
+from app.schemas.dao_documents import DocumentModel
 
 TASK_DB: List[dict] = [
     {

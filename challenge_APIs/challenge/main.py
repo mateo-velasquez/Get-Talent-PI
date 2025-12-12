@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 import uvicorn
 from contextlib import asynccontextmanager
-from challenge_APIs.challenge.app.routers import router
-from challenge_APIs.challenge.app.utils.logging import Logger
+from app.routers import router
+from app.utils.logging import Logger
 
 # Definimos el ciclo de vida (Inicio y Apagado)
 @asynccontextmanager

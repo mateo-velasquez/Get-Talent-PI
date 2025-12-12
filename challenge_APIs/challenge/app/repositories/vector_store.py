@@ -1,7 +1,7 @@
 import chromadb
 import cohere
 from chromadb import Documents, EmbeddingFunction, Embeddings
-from utils.logging import Logger
+from app.utils.logging import Logger
 
 # Clase refactorizada para encajar en la arquitectura RAG del Challenge
 class VectorStore:
