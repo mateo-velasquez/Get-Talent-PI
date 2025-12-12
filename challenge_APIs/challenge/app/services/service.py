@@ -8,13 +8,13 @@ from app.schemas.dtos import (
 from app.schemas.dao_documents import DocumentModel
 from app.utils.logging import Logger
 from typing import List
-from app.core.config import API_KEY
+#from app.core.config import API_KEY
 
 # Clase para hacer de orquestador (tiene la lógica del negocio)
 class RagService:
     def __init__(self, repository: DocumentRepository, vector_store: VectorStore):
         self.repository = repository
-        self.vector_store = vector_store(API_KEY)
+        self.vector_store = vector_store
 
     # Función para cargar documentos
     async def upload_document(self, data: DocumentUploadRequest) -> DocumentUploadResponse:

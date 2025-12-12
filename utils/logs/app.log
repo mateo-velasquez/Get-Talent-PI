@@ -11,3 +11,30 @@
 2025-12-12 15:58:39 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
 2025-12-12 15:58:40 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
 2025-12-12 15:58:52 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 16:01:36 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 16:01:36 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 16:01:38 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 16:15:56 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 16:16:18 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 16:16:18 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 16:16:19 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 16:17:04 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 16:17:12 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 16:17:12 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 16:17:13 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 16:17:25 - INFO - [API_RAG_CHALLENGE] - Service: Solicitando lista completa de documentos
+2025-12-12 16:17:25 - ERROR - [API_RAG_CHALLENGE] - Error crítico para obtener todos los documentos: 1 validation error for DocumentModel
+upload_date
+  Field required [type=missing, input_value={'document_id': '1', 'tit... '2025-12-15T10:00:00Z'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2025-12-12 16:22:07 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 16:22:16 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 16:22:16 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 16:22:17 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 16:22:30 - INFO - [API_RAG_CHALLENGE] - Service: Solicitando lista completa de documentos
+2025-12-12 16:22:30 - DEBUG - [API_RAG_CHALLENGE] - Service: Se recuperaron 1 documentos.
+2025-12-12 16:22:38 - INFO - [API_RAG_CHALLENGE] - Service: Solicitando lista completa de documentos
+2025-12-12 16:22:38 - DEBUG - [API_RAG_CHALLENGE] - Service: Se recuperaron 1 documentos.
+2025-12-12 16:22:58 - INFO - [API_RAG_CHALLENGE] - Service: Solicitando lista completa de documentos
+2025-12-12 16:22:58 - DEBUG - [API_RAG_CHALLENGE] - Service: Se recuperaron 1 documentos.
+2025-12-12 16:23:47 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.

@@ -23,6 +23,6 @@ def get_document_repository() -> DocumentRepository:
 
 def get_rag_service():
     return RagService(
-        doc_repo=document_repository_singleton,       # El repo de texto
+        repository=document_repository_singleton,       # El repo de texto
         vector_store=vector_store_singleton           # El repo de vectores
     )

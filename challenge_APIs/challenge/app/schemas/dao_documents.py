@@ -9,5 +9,5 @@ class DocumentModel(BaseModel):
     content: str = Field(..., min_length=1, description="Contenido del documento")
     embedding: bool = False
     create_date: datetime
-    upload_date: datetime
+    update_date: datetime
 
