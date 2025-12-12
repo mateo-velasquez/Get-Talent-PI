@@ -1,0 +1,31 @@
+PROYECTO_RAG/
+│
+├── main.py                     # Entry Point: Inicia FastAPI, Lifespan y Logger
+├── .env                        # Credenciales (COHERE_API_KEY, etc.)
+├── requirements.txt            # Dependencias
+│
+└── app/
+    ├── __init__.py
+    │
+    ├── core/                   # El "Núcleo" de configuración
+    │   ├── config.py           # Carga variables de entorno (Pydantic Settings)
+    │
+    ├── schemas/                # Los "Contratos" (Input/Output)
+    │   └── documents.py        # Define UploadRequest, SearchResponse, AskResponse, etc.
+    │
+    ├── repositories/           # La "Memoria" (Persistencia)
+    │   └── repository.py       # Clase DocumentRepository (Híbrido: Dict + ChromaDB)
+    │                           # Métodos separados: add_document() vs process_embeddings()
+    │
+    ├── services/               # El "Cerebro" (Lógica de Negocio)
+    │   └── rag_service.py      # Orquestador: Coordina Repositorio y LLM
+    │                           # Métodos separados: upload(), generate_embeddings(), ask()
+    │
+    ├── routers/                # La "Puerta" (HTTP)
+    │   └── routes.py           # Endpoints. Solo validan y llaman al servicio.
+    │
+    ├── utils/                  # Herramientas Externas
+    │   └── llm_client.py       # Cliente para conectar con Cohere (Chat y Embeddings)
+    │   └── logging.py          # clase Logger optimizada
+    │
+    └── dependencies.py         # Inyección de Dependencias (Singleton del Repository)
