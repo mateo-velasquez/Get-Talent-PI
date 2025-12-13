@@ -38,3 +38,64 @@ upload_date
 2025-12-12 16:22:58 - INFO - [API_RAG_CHALLENGE] - Service: Solicitando lista completa de documentos
 2025-12-12 16:22:58 - DEBUG - [API_RAG_CHALLENGE] - Service: Se recuperaron 1 documentos.
 2025-12-12 16:23:47 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 16:30:05 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 16:30:05 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 16:30:06 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 16:30:19 - INFO - [API_RAG_CHALLENGE] - Iniciando carga de documento. Título: 'La vida es bella'
+2025-12-12 16:30:19 - ERROR - [API_RAG_CHALLENGE] - Fallo en el guardado de archivos: 2 validation errors for DocumentModel
+create_date
+  Field required [type=missing, input_value={'document_id': None, 'ti...ro', 'embedding': False}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+update_date
+  Field required [type=missing, input_value={'document_id': None, 'ti...ro', 'embedding': False}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2025-12-12 16:30:19 - ERROR - [API_RAG_CHALLENGE] - Error crítico en endpoint /upload: 2 validation errors for DocumentModel
+create_date
+  Field required [type=missing, input_value={'document_id': None, 'ti...ro', 'embedding': False}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+update_date
+  Field required [type=missing, input_value={'document_id': None, 'ti...ro', 'embedding': False}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2025-12-12 23:09:36 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 23:09:46 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 23:09:46 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 23:09:47 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 23:09:50 - INFO - [API_RAG_CHALLENGE] - Iniciando carga de documento. Título: 'La vida es bella'
+2025-12-12 23:09:50 - INFO - [API_RAG_CHALLENGE] - DB: Creado documento ID 2 - La vida es bella
+2025-12-12 23:09:50 - INFO - [API_RAG_CHALLENGE] - Documento cargado exitosamente. ID asignado: document_id='2' title='La vida es bella' content='Había una vez un estudiante de ingeniería de sistemas que vio cómo su abuelo murió de un infarto, desde ese momento eligió ser feliz y dejar su carrera, ahora es bartender en un bar en Río de Janeiro' embedding=False create_date=datetime.datetime(2025, 12, 12, 23, 9, 50, 849374) update_date=datetime.datetime(2025, 12, 12, 23, 9, 50, 849374)
+2025-12-12 23:09:50 - ERROR - [API_RAG_CHALLENGE] - Error crítico en endpoint /upload: 1 validation error for DocumentUploadResponse
+document_id
+  Input should be a valid string [type=string_type, input_value=DocumentModel(document_id... 12, 23, 9, 50, 849374)), input_type=DocumentModel]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-12-12 23:13:50 - INFO - [API_RAG_CHALLENGE] - Iniciando carga de documento. Título: 'La vida es bella'
+2025-12-12 23:13:50 - INFO - [API_RAG_CHALLENGE] - DB: Creado documento ID 3 - La vida es bella
+2025-12-12 23:13:50 - INFO - [API_RAG_CHALLENGE] - Documento cargado exitosamente. ID asignado: document_id='3' title='La vida es bella' content='Había una vez un estudiante de ingeniería de sistemas que vio cómo su abuelo murió de un infarto, desde ese momento eligió ser feliz y dejar su carrera, ahora es bartender en un bar en Río de Janeiro' embedding=False create_date=datetime.datetime(2025, 12, 12, 23, 13, 50, 326546) update_date=datetime.datetime(2025, 12, 12, 23, 13, 50, 326546)
+2025-12-12 23:13:50 - ERROR - [API_RAG_CHALLENGE] - Error crítico en endpoint /upload: 1 validation error for DocumentUploadResponse
+document_id
+  Input should be a valid string [type=string_type, input_value=DocumentModel(document_id...12, 23, 13, 50, 326546)), input_type=DocumentModel]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-12-12 23:19:25 - INFO - [API_RAG_CHALLENGE] - Iniciando carga de documento. Título: 'La vida es bella'
+2025-12-12 23:19:25 - INFO - [API_RAG_CHALLENGE] - DB: Creado documento ID 4 - La vida es bella
+2025-12-12 23:19:25 - INFO - [API_RAG_CHALLENGE] - Documento cargado exitosamente. ID asignado: document_id='4' title='La vida es bella' content='Había una vez un estudiante de ingeniería de sistemas que vio cómo su abuelo murió de un infarto, desde ese momento eligió ser feliz y dejar su carrera, ahora es bartender en un bar en Río de Janeiro' embedding=False create_date=datetime.datetime(2025, 12, 12, 23, 19, 25, 381952) update_date=datetime.datetime(2025, 12, 12, 23, 19, 25, 382950)
+2025-12-12 23:19:25 - ERROR - [API_RAG_CHALLENGE] - Error crítico en endpoint /upload: 1 validation error for DocumentUploadResponse
+document_id
+  Input should be a valid string [type=string_type, input_value=DocumentModel(document_id...12, 23, 19, 25, 382950)), input_type=DocumentModel]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-12-12 23:19:31 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.
+2025-12-12 23:19:42 - DEBUG - [API_RAG_CHALLENGE] - DocumentRepository inicializado sobre TASK_DB
+2025-12-12 23:19:42 - INFO - [API_RAG_CHALLENGE] - Inicializando la clase VectorStore
+2025-12-12 23:19:43 - INFO - [API_RAG_CHALLENGE] - La aplicación se ha iniciado correctamente. Lista para recibir peticiones.
+2025-12-12 23:19:48 - INFO - [API_RAG_CHALLENGE] - Iniciando carga de documento. Título: 'La vida es bella'
+2025-12-12 23:19:48 - INFO - [API_RAG_CHALLENGE] - DB: Creado documento ID 2 - La vida es bella
+2025-12-12 23:19:48 - INFO - [API_RAG_CHALLENGE] - Documento cargado exitosamente. ID asignado: 2
+2025-12-12 23:20:13 - INFO - [API_RAG_CHALLENGE] - Service: Solicitando lista completa de documentos
+2025-12-12 23:20:13 - DEBUG - [API_RAG_CHALLENGE] - Service: Se recuperaron 2 documentos.
+2025-12-12 23:28:26 - INFO - [API_RAG_CHALLENGE] - Servicio: Iniciando embedding para 2
+2025-12-12 23:28:26 - INFO - [API_RAG_CHALLENGE] - Documento con id {}
+2025-12-12 23:28:26 - INFO - [API_RAG_CHALLENGE] - VectorStore: Documento ID {doc_id} guardado/actualizado.
+2025-12-12 23:28:26 - INFO - [API_RAG_CHALLENGE] - DB: Embedding flag activado para ID 2
+2025-12-12 23:28:35 - INFO - [API_RAG_CHALLENGE] - Servicio: Iniciando embedding para 2
+2025-12-12 23:28:35 - INFO - [API_RAG_CHALLENGE] - Documento con id {}
+2025-12-12 23:28:35 - INFO - [API_RAG_CHALLENGE] - VectorStore: Documento ID {doc_id} guardado/actualizado.
+2025-12-12 23:28:35 - INFO - [API_RAG_CHALLENGE] - DB: Embedding flag activado para ID 2
+2025-12-12 23:32:50 - INFO - [API_RAG_CHALLENGE] - La aplicación se está deteniendo.

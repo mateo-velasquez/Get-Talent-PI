@@ -8,7 +8,6 @@ from app.schemas.dtos import (
 from app.schemas.dao_documents import DocumentModel
 from app.utils.logging import Logger
 from typing import List
-#from app.core.config import API_KEY
 
 # Clase para hacer de orquestador (tiene la lógica del negocio)
 class RagService:
@@ -33,13 +32,13 @@ class RagService:
             raise e
 
         # Llamamos al método de repository
-        doc_id = await self.repository.create_document(document)
-        Logger.add_to_log("info", f"Documento cargado exitosamente. ID asignado: {doc_id}")
+        doc_response = await self.repository.create_document(document)
+        Logger.add_to_log("info", f"Documento cargado exitosamente. ID asignado: {doc_response.document_id}")
         
         # Retornamos el response correspondiente
         return DocumentUploadResponse(
-            message="Document uploaded successfully",
-            document_id=doc_id
+            message = "Document uploaded successfully",
+            document_id = doc_response.document_id
         )
     
     async def get_documents(self) -> List[DocumentModel]:

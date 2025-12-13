@@ -8,6 +8,6 @@ class DocumentModel(BaseModel):
     title: str = Field(..., min_length=1, description="Título del documento") 
     content: str = Field(..., min_length=1, description="Contenido del documento")
     embedding: bool = False
-    create_date: datetime
-    update_date: datetime
+    create_date: datetime = Field(default_factory=datetime.now)
+    update_date: datetime = Field(default_factory=datetime.now)
 
